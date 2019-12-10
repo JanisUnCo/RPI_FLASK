@@ -8,7 +8,7 @@ def index():
 
 @app.route('/cakes')
 def cakes():
-    return 'Tortes ir ok'
+    return render_template('cakes.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
