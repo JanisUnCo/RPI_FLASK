@@ -9,22 +9,22 @@
     <a href="/cakes">CAKES</a>
     <a href="/hello/paul">Hi Paul</a>
     <a href="/hello/SOUCE">SOUCE</a>
+    <a href="/13/on">IESLEDZ 13 PINU</a>
 
     <h2>Device Listing and Status</h2>
+        {% for pin in pins %}
+        <p>The {{ pins[pin].name }}
+        {% if pins[pin].state == true %}
+        is currently on (<a href="/{{pin}}/off">turn off</a>)
+        {% else %}
+        is currently off (<a href="/{{pin}}/on">turn on</a>)
+        {% endif %}
+        </p>
+        {% endfor %}
 
-    {% for pin in pins %}
-    <p>The {{ pins[pin].name }}
-    {% if pins[pin].state == true %}
-    is currently on (<a href="/{{pin}}/off">turn off</a>)
-    {% else %}
-    is currently off (<a href="/{{pin}}/on">turn on</a>)
-    {% endif %}
-    </p>
-    {% endfor %}
-
-    {% if message %}
+        {% if message %}
     <h3>{{ message }}</h3>
-    {% endif %}
+        {% endif %}
 
 </body>
 </html>

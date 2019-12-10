@@ -58,13 +58,11 @@ def action(changePin, action):
         'pins' : pins
     }
 
-    return render_template('main.html', **templateData)
+    return render_template('index.html', **templateData)
 
 @app.route('/cakes')
 def cakes():
     return render_template('cakes.html')
-    GPIO.output(13,GPIO.HIGH)
-    
 
 @app.route('/hello/<name>')
 def hello(name):
