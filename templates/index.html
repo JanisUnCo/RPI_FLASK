@@ -3,19 +3,28 @@
 <link rel="stylesheet" href='/static/style.css' />
 </head>
 <body>
-<h1>MAIZE IR OK</h1>
-<a href="/hello/crack">CRACK</a>
-<a href="/hello/dichead">BWREAD</a>
-<a href="/hello/cakes">CAKES</a>
-<a href="/hello/paul">Hi Paul</a>
-<a href="/hello/SOUCE">SOUCE</a>
+    <h1>MAIZE IR OK</h1>
+    <a href="/hello/crack">CRACK</a>
+    <a href="/hello/dichead">BWREAD</a>
+    <a href="/cakes">CAKES</a>
+    <a href="/hello/paul">Hi Paul</a>
+    <a href="/hello/SOUCE">SOUCE</a>
 
-<h2>Device Listing and Status</h2>
-<p>The {{ pins[pin].name }}
-(<a href="/{{pin}}/off">turn off</a>)
-(<a href="/{{pin}}/on">turn on</a>)
-</p>
-<h3>{{ message }}</h3>
+    <h2>Device Listing and Status</h2>
+
+    {% for pin in pins %}
+    <p>The {{ pins[pin].name }}
+    {% if pins[pin].state == true %}
+    is currently on (<a href="/{{pin}}/off">turn off</a>)
+    {% else %}
+    is currently off (<a href="/{{pin}}/on">turn on</a>)
+    {% endif %}
+    </p>
+    {% endfor %}
+
+    {% if message %}
+    <h3>{{ message }}</h3>
+    {% endif %}
 
 </body>
 </html>
