@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Kaka ir ok'
+    return render_template('index.html')
 
 @app.route('/cakes')
 def cakes():
