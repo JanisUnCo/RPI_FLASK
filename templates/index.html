@@ -36,11 +36,10 @@
 
     <h2>Device Listing and Status</h2>
         {% for pin in pins %}
-        <p>The {{ pins[pin].name }}
-        {% if pins[pin].state == true %}
-        is currently on (<button class="button"><a href="/{{pin}}/off">turn off</a></button>)
+        <p>
+        <p><button class="button"><a href="/{{pin}}/off">PIRMAIS LEDS</a></button></p>
         {% else %}
-        is currently off (<a href="/{{pin}}/on">turn on</a>)
+        <p><button class="button"></button><a href="/{{pin}}/on">OTRS LEDS</a></button></p>
         {% endif %}
         </p>
         {% endfor %}
