@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 import RPi.GPIO as GPIO
-GPIO.setup(13,GPIO.OUT)
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BCM,13,GPIO.OUT)
 GPIO.setwarnings(False)
 
 app = Flask(__name__)
