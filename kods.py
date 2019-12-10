@@ -1,14 +1,19 @@
 from flask import Flask, render_template
+import RPi.GPIO as GPIO
+GPIO.setup(13,GPIO.OUT)
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template('index.html')
+    GPIO.output(13,GPIO.LOW)
 
 @app.route('/cakes')
 def cakes():
     return render_template('cakes.html')
+    GPIO.output(13,GPIO.HIGH)
+    
 
 @app.route('/hello/<name>')
 def hello(name):
