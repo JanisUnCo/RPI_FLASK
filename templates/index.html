@@ -36,10 +36,11 @@
 
     <h2>Device Listing and Status</h2>
         {% for pin in pins %}
-        <p>
-        <p><button class="button"><a href="/{{pin}}/off">PIRMAIS LEDS</a></button></p>
+        <p>Darbiba prieks{{ pins[pin].name }}
+        {% if pins[pin].state == true %}
+        (<button class="button"><a href="/{{pin}}/off">pirma</a></button>)
         {% else %}
-        <p><button class="button"></button><a href="/{{pin}}/on">OTRS LEDS</a></button></p>
+        (<button class="button"><a href="/{{pin}}/on">otra</a></button>)
         {% endif %}
         </p>
         {% endfor %}
