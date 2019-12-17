@@ -7,6 +7,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(13,GPIO.OUT)
 GPIO.setup(19,GPIO.OUT)
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -19,6 +20,7 @@ def cakes():
 def gaisma(vards):
     if vards == "janis":
         GPIO.output(13,GPIO.HIGH)
+        GPIO.output(19,GPIO.HIGH)
 
     return render_template('gaisma.html')
 
