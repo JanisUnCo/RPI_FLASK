@@ -66,7 +66,7 @@ def cakes():
 
 @app.route('/gaisma?fname=janis')
 def gaisma():
-    return render_template('cakes.html')
+    return render_template('gaisma.html')
     GPIO.output(13, GPIO.HIGH)
 
 @app.route('/hello/<name>')
