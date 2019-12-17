@@ -63,6 +63,8 @@ def action(changePin, action):
 @app.route('/cakes')
 def cakes():
     return render_template('cakes.html')
+    if fname = janis
+        GPIO.output(13, GPIO.HIGH)
 
 @app.route('/hello/<name>')
 def hello(name):
