@@ -67,7 +67,7 @@ def cakes():
 @app.route('/?fname=<vards>')
 def gaisma(vards):
     if vards == "janis":
-        GPIO.output(13, GPIO.HIGH)
+        GPIO.output(13,GPIO.HIGH)
 
 
     return render_template('gaisma.html')
