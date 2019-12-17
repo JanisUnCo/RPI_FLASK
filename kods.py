@@ -64,6 +64,11 @@ def action(changePin, action):
 def cakes():
     return render_template('cakes.html')
 
+@app.route('/gaisma?fname=janis')
+def gaisma():
+    return render_template('cakes.html')
+    GPIO.output(13, GPIO.HIGH)
+
 @app.route('/hello/<name>')
 def hello(name):
     return render_template('page.html', name=name)
