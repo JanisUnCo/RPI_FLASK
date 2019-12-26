@@ -3,26 +3,6 @@
 <link rel="stylesheet" href='/static/style.css' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.button {
-  padding: 15px 25px;
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-.button:hover {background-color: #3e8e41}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
 </style>
 </head>
 <body>
@@ -33,21 +13,5 @@
     <a href="/hello/paul">Hi Paul</a>
     <a href="/hello/SOUCE">SOUCE</a>
     <a href="/13/on">IESLEDZ 13 PINU</a>
-
-    <h2>Device Listing and Status</h2>
-        {% for pin in pins %}
-        <p>Darbiba prieks{{ pins[pin].name }}
-        {% if pins[pin].state == true %}
-        (<button class="button"><a href="/{{pin}}/off">pirma</a></button>)
-        {% else %}
-        (<button class="button"><a href="/{{pin}}/on">otra</a></button>)
-        {% endif %}
-        </p>
-        {% endfor %}
-
-        {% if message %}
-    <h3>{{ message }}</h3>
-        {% endif %}
-
 </body>
 </html>
